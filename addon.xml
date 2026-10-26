@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.dial411" name="dial411" version="0.1.0" provider-name="avidus">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="main.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Radio station artwork and info lookup</summary>
+    <description lang="en_GB">Looks up artwork and station details for the radio stations in your playlist, using the free Radio Browser database. Shows you what it found and lets you choose what to apply.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+    <license>GPL-3.0-or-later</license>
+    <news>0.1.0 - Skeleton. Lists stations from the playlist.</news>
+  </extension>
+</addon>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings version="1">
+  <section id="dial411">
+    <category id="playlist" label="Playlist">
+      <group id="1">
+        <setting id="playlist_path" type="path" label="Radio playlist file">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+            <masking>*.m3u|*.m3u8</masking>
+          </constraints>
+          <control type="button" format="file">
+            <heading>Pick your radio playlist</heading>
+          </control>
+        </setting>
+        <setting id="logo_folder" type="path" label="Where to save artwork">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+            <writable>true</writable>
+          </constraints>
+          <control type="button" format="path">
+            <heading>Pick a folder for station artwork</heading>
+          </control>
+        </setting>
+      </group>
+    </category>
+  </section>
+</settings>
