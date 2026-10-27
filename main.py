@@ -291,7 +291,7 @@ def open_station(station, mine=None, all_mine=None, allow_sources=True):
                 listen(station)
             return
         if chose == 'artwork' and mine:
-            improve_station(mine, all_mine)
+            change_artwork(mine, all_mine)
             return
         if chose == 'third':
             if mine:
@@ -501,6 +501,32 @@ def _source_of(url):
         return host.replace('www.', '')
     except Exception:
         return 'the web'
+
+def change_artwork(mine, all_mine):
+    # Straight to the pictures. The chooser already looks at every match it
+    # found, so asking which station is yours first changed nothing - the
+    # match percentage is shown beside each logo instead.
+    import lookup
+    progress = xbmcgui.DialogProgress()
+    progress.create('dial411', 'Looking up ' + mine['name'] + '...')
+    progress.update(30, 'Searching the database...')
+    found = lookup.matches(mine, 5)
+    progress.update(90, 'Sorting what came back...')
+    progress.close()
+
+    if not found:
+        xbmcgui.Dialog().ok('dial411',
+            'Nothing found for ' + mine['name'] + '.\n\n'
+            'It may not be in the database, or it may be listed under a different name.')
+        return
+
+    picked_art = choose_artwork(mine, found)
+    if not picked_art:
+        return
+
+    changed = apply_changes(mine, found[0][1], ['artwork'], all_mine, picked_art)
+    if changed:
+        offer_merge('Artwork saved for ' + mine['name'] + '.')
 
 def improve_station(mine, all_mine):
     import lookup
