@@ -7,6 +7,8 @@ playlist, using the free [Radio Browser](https://api.radio-browser.info)
 database. Shows you what it found and lets you choose what to apply. It never
 changes anything without being asked, and it backs up your playlist first.
 
+![Choosing artwork from every logo it found](resources/screenshot-01.png)
+
 ## What it does
 
 **Find stations** - browse by genre (72 genres across 12 groups), or search by
