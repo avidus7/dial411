@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.program.dial411" name="dial411" version="0.1.0" provider-name="avidus">
+<addon id="plugin.program.dial411" name="dial411" version="0.1.1" provider-name="avidus">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
@@ -13,8 +13,15 @@
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
+      <screenshot>fanart.jpg</screenshot>
+      <screenshot>resources/screenshot-01.png</screenshot>
+      <screenshot>resources/screenshot-02.png</screenshot>
+      <screenshot>resources/screenshot-03.png</screenshot>
+      <screenshot>resources/screenshot-04.png</screenshot>
     </assets>
     <license>GPL-3.0-or-later</license>
-    <news>0.1.0 - Skeleton. Lists stations from the playlist.</news>
+    <news>0.1.1 - Added screenshots. No change to how the add-on works.
+
+0.1.0 - First release. Find stations by genre or name, listen before adding them, and fill in artwork and details from the free Radio Browser database or the station's own website.</news>
   </extension>
 </addon>
